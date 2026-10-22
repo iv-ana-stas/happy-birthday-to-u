@@ -1,0 +1,296 @@
+@font-face {
+    font-family: "MyFont1";
+    src: url("resources/GreatVibes_Regular/GreatVibes-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "MyFont2";
+    src: url("resources/Montserrat_Alternates/MontserratAlternates-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    max-width: 1500px;
+    min-height: 1700px;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: url("img/bg2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    margin: 10px auto;
+    color: #fbefaa;
+    font-family: "MyFont2";
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center;
+}
+
+p {
+    margin: 10px 40px;
+    color: #fdfeef;
+    font-family: "MyFont2";
+    font-size: 30px;
+    font-weight: 600;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0 20px;
+    position: static;
+    z-index: 1;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.counter {
+    width: 400px;
+    margin: auto;
+    padding: 10px 0;
+    box-sizing: border-box;
+    border: 3px solid #fdfeef;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.counter:hover {
+    box-shadow:
+        0 0 15px rgba(255, 255, 255, 0.8),
+        0 0 30px rgba(255, 255, 255, 0.5),
+        inset 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.btn {
+    width: 400px;
+    height: 65px;
+    margin: 30px auto;
+    border: 3px solid #fdfeef;
+    border-radius: 10px;
+    background: none;
+    color: #fdfeef;
+    font-family: "MyFont2";
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.05s ease;
+}
+
+.btn:hover {
+    text-decoration: underline;
+    box-shadow:
+        0 0 15px rgba(255, 255, 255, 0.8),
+        0 0 30px rgba(255, 255, 255, 0.5),
+        inset 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.wish-text {
+    max-width: 600px;
+    margin: 25px 200px;
+    font-size: 30px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.checkbox-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.form-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fbefaa;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #fdfeef;
+    font-family: "MyFont2";
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    border: 3px solid #fdfeef;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.custom-checkbox:hover .checkmark {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: #fdfeef;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+.checkmark::after {
+    display: none;
+    position: absolute;
+    top: 2px;
+    left: 7px;
+    width: 6px;
+    height: 12px;
+    border: solid #050c1a;
+    border-width: 0 3px 3px 0;
+    content: "";
+    transform: rotate(45deg);
+}
+
+.custom-checkbox input:checked ~ .checkmark::after {
+    display: block;
+}
+
+.polaroid-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 85px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.left-side {
+    left: 5%;
+}
+
+.right-side {
+    right: 5%;
+}
+
+.polaroid {
+    position: static;
+    width: 200px;
+    padding: 10px 10px 30px 10px;
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+    pointer-events: auto;
+}
+
+.polaroid:hover {
+    transform: scale(1.1) rotate(0deg);
+    z-index: 10;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #eee;
+    object-fit: fill;
+}
+
+.polaroid .caption {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    color: #333;
+    font-family: "MyFont1";
+    font-size: 20px;
+    line-height: 0.7;
+    text-align: center;
+}
+
+@media (max-width: 1400px) {
+    .left-side { left: 3%; }
+    .right-side { right: 3%; }
+    .polaroid { width: 160px; }
+    .polaroid img { height: 160px; }
+}
+
+@media (max-width: 1100px) {
+    .polaroid-wrapper {
+        display: none;
+    }
+}
+
+.stars-blink {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.stars-blink::before {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(1px 1px at 10% 20%, #fff4b8, rgb(252, 237, 153) 50%, transparent),
+        radial-gradient(1px 1px at 30% 70%, #ffe08a, rgba(251, 229, 107, 0.861) 50%, transparent),
+        radial-gradient(2px 2px at 50% 40%, #fff4b8, rgba(252, 237, 153) 50%, transparent),
+        radial-gradient(1px 1px at 70% 80%, #ffe08a, rgba(251, 229, 107, 0.861) 50%, transparent),
+        radial-gradient(1.5px 1.5px at 85% 15%, #fff4b8, rgba(252, 237, 153) 50%, transparent),
+        radial-gradient(1px 1px at 95% 60%, #ffe08a, rgba(251, 229, 107, 0.861) 50%, transparent);
+    background-size: 200px 200px;
+    content: "";
+    animation: blinkStars 4s infinite alternate;
+}
+
+.stars-blink::after {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(ellipse 2px 20px at 20% 30%, #fff 10%, transparent 100%),
+        radial-gradient(ellipse 20px 2px at 20% 30%, #fff 10%, transparent 100%),
+        radial-gradient(ellipse 3px 30px at 80% 65%, #fff 10%, transparent 100%),
+        radial-gradient(ellipse 30px 3px at 80% 65%, #fff 10%, transparent 100%),
+        radial-gradient(ellipse 2px 25px at 10% 80%, #fff 10%, transparent 100%),
+        radial-gradient(ellipse 25px 2px at 10% 80%, #fff 10%, transparent 100%),
+        radial-gradient(ellipse 2px 20px at 90% 25%, #fff 10%, transparent 100%),
+        radial-gradient(ellipse 20px 2px at 90% 25%, #fff 10%, transparent 100%),
+        radial-gradient(ellipse 2px 20px at 95% 90%, #fff 10%, transparent 100%),
+        radial-gradient(ellipse 20px 2px at 95% 90%, #fff 10%, transparent 100%);
+    background-repeat: no-repeat;
+    content: "";
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9));
+    animation: blinkStars 5s infinite alternate;
+}
+
+@keyframes blinkStars {
+    0% { opacity: 0.1; }
+    50% { opacity: 0.9; }
+    100% { opacity: 0.2; }
+}

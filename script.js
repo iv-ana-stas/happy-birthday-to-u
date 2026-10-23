@@ -56,4 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
             replayAnimation(checkResult);
         });
     }
+    console.log("%cПривет!", "font-size: 20px; font-weight: bold; color: #fbefaa;");
+    console.log("%cИсходный код этого безобразия лежит здесь: https://github.com/iv-ana-stas/happy-birthday-to-u", "font-size: 	14px; color: #fdfeef;");
 });

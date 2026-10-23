@@ -102,7 +102,7 @@
                 пусть программа отрабатывает вложенные в неё усилия!
             </p>
             <button type="button" id="wish-btn" class="btn">Получить пожелание!</button>
-            <p id="wish-container" class="wish-text" style="display: none;"></p>
+            <p id="wish-container" class="wish-text" hidden></p>
             <div class="checkbox-form">
                 <p class="form-title">Официальное подтверждение:</p>
                 <label class="custom-checkbox">
@@ -121,7 +121,7 @@
                     Я готов получить торт
                 </label>
                 <button type="button" id="check-btn" class="btn" style="margin-top: 20px;">Подтвердить!</button>
-                <p id="check-result" class="wish-text" style="display: none;"></p>
+                <p id="check-result" class="wish-text" hidden></p>
             </div>
         </div>
         <div class="polaroid-wrapper right-side">

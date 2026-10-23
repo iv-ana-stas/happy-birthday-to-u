@@ -1,4 +1,5 @@
 <?php
+    date_default_timezone_set('Europe/Moscow');
     $wishes = require 'wishes.php';
     $today = new DateTime('today');
     $today->setTime(0, 0, 0);
